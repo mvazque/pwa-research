@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<head>
+    <script src="./service-worker.js"></script>
+
+    <script src="./js/idb.js"></script>
+    <script src="./js/index-db-utility.js"></script>
+
+    <script defer src="./index.js"></script>
+    
+    <link href="./index.css" rel="stylesheet" />
+    <link rel="manifest" href="/manifest.json" />
+
+    <meta name="theme-color" content="3f51b5">
+    <meta name="viewport" content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0">
+
+</head>
+<body>
+    <header>
+        <nav>
+            <a href="/">Home</a>
+            <a href="/help">Help</a>
+        </nav>
+        <button type="button" onclick="enableNotifications(event)">Enable Notifications</button>
+    </header>
+    
+    <h1>To-Do List</h1>
+    <ul id="todo-list">
+        <li><input type="checkbox"> Todo Item 1</li>
+        <li><input type="checkbox"> Todo Item 2</li>
+        <li><input type="checkbox"> Todo Item 3</li>
+        <li><input type="checkbox"> Todo Item 4</li>
+    </ul>
+
+    <button type="button" onclick="openTodoCreation()">Create Todo Item</button>
+
+    <div id="todo-creation-modal">
+        <p>Hey its the modal</p>
+        <form>
+            <input id="toDoDescription" placeholder="To Do Description" type="text"> 
+        </form>
+
+        <div>
+            <button type="button" onclick="closeModal()">Cancel</button>
+            <button type="submit" onclick="submitTodo()">Submit</button>
+        </div>
+    </div>
+</body>

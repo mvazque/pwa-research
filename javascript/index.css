@@ -1,0 +1,13 @@
+ul {
+  list-style-type: none;
+}
+
+#todo-creation-modal{
+  transform: translateY(100vh);
+  transition: transform 0.3s;
+  box-shadow: rgba(0, 0, 0, 1) 0px 0px 16px;
+
+  width: 95%;
+  height: 70vh;
+  margin: auto;
+}

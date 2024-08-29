@@ -1,0 +1,9 @@
+<h2 mat-dialog-title>Create Todo</h2>
+<mat-dialog-content class="mat-typography">
+  <label>Todo Description</label>
+  <input type="text" [(ngModel)]="todoDescription" (keyup.enter)="submitForm()">
+</mat-dialog-content>
+<mat-dialog-actions align="end">
+  <button mat-button mat-dialog-close>Cancel</button>
+  <button mat-button [mat-dialog-close]="todoDescription" cdkFocusInitial (click)="submitForm()">Create</button>
+</mat-dialog-actions>

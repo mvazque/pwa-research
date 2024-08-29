@@ -1,0 +1,16 @@
+{
+  "name": "pwa-poc",
+  "version": "1.0.0",
+  "description": "A proof of concept for PWA work",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "start": "http-server -c-1",
+    "start-pem": "http-server -S -C cert.pem"
+  },
+  "author": "",
+  "license": "ISC",
+  "dependencies": {
+    "http-server": "^14.1.1"
+  }
+}
